@@ -1,3 +1,5 @@
+// components/AddHotelForm.js
+
 import React, { useState } from 'react';
 import axios from 'axios';
 
@@ -21,10 +23,19 @@ const AddHotelForm = () => {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:8000/hotels', formData);
+      await axios.post('http://localhost:8000/hotels/', );
       alert('Hotel added successfully!');
+      // Clear form data after successful submission
+      setFormData({
+        name: '',
+        picture: '',
+        description: '',
+        price_per_night: '',
+        is_available: true
+      });
     } catch (error) {
       console.error('Error adding hotel:', error);
+      alert('Failed to add hotel. Please check the console for errors.');
     }
   };
 

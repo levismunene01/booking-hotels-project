@@ -39,6 +39,10 @@ function Home() {
 
   return (
     <div className='home'>
+      <div className="welcome">
+        <h1>Welcome to Hotel Booking</h1>
+        <p>Discover luxury and adventure in Nairobi's finest hotels</p>
+      </div>
       <div className="posts">
         {posts.map((post) => (
           <div className="post" key={post.id}>
@@ -50,14 +54,10 @@ function Home() {
                 <h1>{post.title}</h1>
               </Link>
               <p>{post.desc}</p>
+              <Link to={`/booking`} className="book__button">Book Now</Link>
             </div>
           </div>
         ))}
-      </div>
-      <div className="add-hotel">
-        <Link to="/add-hotel">
-          <button className="btn btn-primary">Add Hotel</button>
-        </Link>
       </div>
       <GuestServicesCard />
     </div>

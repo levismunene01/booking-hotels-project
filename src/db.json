@@ -1,0 +1,32 @@
+[
+    {
+      "id": 1,
+      "title": "The Plaza Hotel",
+      "description": "Iconic luxury hotel in New York City",
+      "img": "https://cdn.cnn.com/cnnnext/dam/assets/200713153550-plaza-hotel-exterior.jpg"
+    },
+    {
+      "id": 2,
+      "title": "The Oberoi Udaivilas",
+      "description": "Luxury resort in Udaipur, India",
+      "img": "https://images.trvl-media.com/hotels/1000000/10000/9600/9590/9590_104_z.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Atlantis Paradise Island",
+      "description": "Resort in the Bahamas with water park",
+      "img": "https://www.atlantisbahamas.com/media/Experiences/Atlantis%20Casino/Casino_Exterior.jpg"
+    },
+    {
+      "id": 4,
+      "title": "The Mulia Resort & Villas",
+      "description": "Luxury beachfront resort in Bali, Indonesia",
+      "img": "https://www.themuliabali.com/media/2347/hi-res-themuliabali-exterior.jpg"
+    },
+    {
+      "id": 5,
+      "title": "The Grand Hotel",
+      "description": "Historic hotel on Mackinac Island, Michigan",
+      "img": "https://www.grandhotel.com/sites/default/files/images/gallery/GH_Building5.jpg"
+    }
+  ]
