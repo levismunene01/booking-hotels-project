@@ -1,0 +1,48 @@
+/* Navbar styles */
+.navbar {
+    background-color: #333; /* Dark background color */
+    padding: 10px 0; /* Adjust padding as needed */
+}
+
+/* Navbar brand */
+.navbar-brand {
+    font-size: 1.5rem; /* Larger font size for brand */
+    display: flex;
+    align-items: center; /* Align logo and text vertically */
+}
+
+.logo-img {
+    width: 60px; /* Adjust logo size */
+    height: 60px; /* Ensure height matches width for a circular shape */
+    border-radius: 50%; /* Create a circular shape */
+    object-fit: cover; /* Ensure the image covers the entire area */
+    margin-right: 5px; /* Add space between logo and text */
+    border: 2px solid #fff; /* White border around the image */
+}
+
+/* Navbar links */
+.navbar-nav {
+    display: flex;
+    flex-direction: column; /* Arrange links vertically */
+    align-items: flex-start; /* Align links to the left side */
+    margin-top: 10px; /* Adjust margin as needed */
+}
+
+.navbar-nav .nav-item {
+    margin-bottom: 10px; /* Add space between each nav item */
+}
+
+.navbar-nav .nav-link {
+    color: #fff; /* White text color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffc107; /* Yellow text color on hover */
+}
+
+.footer-gratitude {
+    text-align: center;
+    margin-top: 20px;
+  }
