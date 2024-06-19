@@ -8,15 +8,8 @@ function Footer() {
     <footer className="bg-dark text-light py-3">
       <Container>
         <Row>
-          <Col md={4}>
-            {/* Content for the first column */}
-          </Col>
-          <Col md={4}>
-            {/* Content for the second column */}
-          </Col>
-          <Col md={4}>
-            <h5>Social Media</h5>
-            <div className="social-icons">
+          <Col md={6} className="d-flex justify-content-center justify-content-md-start mb-3 mb-md-0">
+            <div className="social-icons mr-md-auto">
               <OverlayTrigger
                 placement="top"
                 overlay={<Tooltip id="tooltip-facebook">Facebook</Tooltip>}
@@ -59,10 +52,12 @@ function Footer() {
               >
                 <FontAwesomeIcon icon={faGithub} size="2x" className="social-icon" />
               </OverlayTrigger>
-              <p className="mt-3">
+            </div>
+          </Col>
+          <Col md={6} className="d-flex align-items-center justify-content-center justify-content-md-end">
+            <p className="text-center text-md-right">
               Thank you for choosing us! We appreciate your booking and look forward to welcoming you.
             </p>
-            </div>
           </Col>
         </Row>
       </Container>
