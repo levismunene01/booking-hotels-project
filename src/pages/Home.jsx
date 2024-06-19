@@ -1,6 +1,8 @@
+// Home.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Home.css';
+import GuestServicesCard from '../components/GuestServicesCard';
+import './Home.css'; // Ensure to import your CSS file
 
 function Home() {
   const posts = [
@@ -39,19 +41,21 @@ function Home() {
   return (
     <div className='home'>
       <div className="posts">
-        {posts.map(post => (
+        {posts.map((post) => (
           <div className="post" key={post.id}>
-            <img src={post.img} alt={post.title} />
-            <div className='content'>
+            <div className='post__img'>
+              <img src={post.img} alt={post.title} />
+            </div>
+            <div className='post__content'>
               <Link to={`/posts/${post.id}`}>
                 <h1>{post.title}</h1>
               </Link>
               <p>{post.desc}</p>
-              <button>Read More</button>
             </div>
           </div>
         ))}
       </div>
+      <GuestServicesCard />
     </div>
   );
 }
