@@ -6,8 +6,8 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import BookingPage from './pages/BookingPage';
 import Gallery from './pages/Gallery';
-import Login from './pages/Login';
-import Register from './pages/Register';
+// import Login from './pages/Login';
+// import Register from './pages/Register';
 import Services from './pages/Services';
 import Home from './pages/Home';
 import BookingForm from './components/BookingForm';
@@ -82,8 +82,8 @@ const App = () => {
               </BookingPage>
             } />
             <Route path="/gallery" element={<Gallery />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
+            {/* <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} /> */}
             <Route path="/services" element={<Services />} />
             {/* Route for adding a new hotel */}
             <Route path="/add-hotel" element={<AddHotelForm />} />
