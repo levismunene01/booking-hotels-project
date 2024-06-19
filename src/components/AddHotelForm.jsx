@@ -1,33 +1,42 @@
-// AddHotelForm.js (frontend)
+// AddHotelForm.js
 
 import React, { useState } from 'react';
-import api from '../api'; // Assuming this is your Axios instance
+import api from '../api';  // Assuming this is your Axios instance
 
 const AddHotelForm = () => {
   const [formData, setFormData] = useState({
     name: '',
+    picture: '',
     description: '',
-    is_available: true,
-    price: 0.0
+    price_per_night: '',
+    is_available: true
   });
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value
-    });
-  };
-
+  // Handle form submission
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     try {
       const response = await api.post('/hotels', formData);
       console.log('Hotel added:', response.data);
-      // Optionally, you can add logic to show a success message or redirect to another page
+      setFormData({
+        name: '',
+        picture: '',
+        description: '',
+        price_per_night: '',
+        is_available: true
+      });
     } catch (error) {
       console.error('Error adding hotel:', error);
     }
+  };
+
+  // Handle form input changes
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: name === 'is_available' ? e.target.checked : value
+    });
   };
 
   return (
@@ -46,6 +55,16 @@ const AddHotelForm = () => {
           />
         </div>
         <div className="form-group">
+          <label>Picture URL</label>
+          <input
+            type="text"
+            name="picture"
+            value={formData.picture}
+            onChange={handleInputChange}
+            className="form-control"
+          />
+        </div>
+        <div className="form-group">
           <label>Description</label>
           <textarea
             name="description"
@@ -57,15 +76,25 @@ const AddHotelForm = () => {
           ></textarea>
         </div>
         <div className="form-group">
-          <label>Price</label>
+          <label>Price per Night</label>
           <input
             type="number"
-            name="price"
-            value={formData.price}
+            name="price_per_night"
+            value={formData.price_per_night}
             onChange={handleInputChange}
             className="form-control"
             required
           />
+        </div>
+        <div className="form-group form-check">
+          <input
+            type="checkbox"
+            name="is_available"
+            checked={formData.is_available}
+            onChange={handleInputChange}
+            className="form-check-input"
+          />
+          <label className="form-check-label">Available</label>
         </div>
         <button type="submit" className="btn btn-primary">Add Hotel</button>
       </form>

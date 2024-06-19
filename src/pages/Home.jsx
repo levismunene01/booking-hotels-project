@@ -1,4 +1,3 @@
-// Home.js
 import React from 'react';
 import { Link } from 'react-router-dom';
 import GuestServicesCard from '../components/GuestServicesCard';
@@ -54,6 +53,11 @@ function Home() {
             </div>
           </div>
         ))}
+      </div>
+      <div className="add-hotel">
+        <Link to="/add-hotel">
+          <button className="btn btn-primary">Add Hotel</button>
+        </Link>
       </div>
       <GuestServicesCard />
     </div>
